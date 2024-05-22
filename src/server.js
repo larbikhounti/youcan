@@ -1,15 +1,15 @@
 const express = require('express'); 
-let app =  express()
+const router = express.Router()
 
-app.get('/', function (req, res) {
+router.get('/', function (req, res) {
     res.send('Hello World')
   })
 
 
-  app.post('/webhook', function (req, res) {
+router.post('/webhook', function (req, res) {
     res.send(req.params)
-  })  
+})  
   
-  app.listen(3000,()=> console.log("listening"))
+module.exports = router;
 
   
